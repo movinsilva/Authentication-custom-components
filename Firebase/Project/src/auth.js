@@ -1,0 +1,1 @@
+import { FirebaseApp } from "firebase/app";
