@@ -1,16 +1,19 @@
-import {  SignInButton, SignOutButton, SignedIn, SignedOut } from '@clerk/clerk-react'
+import { BrowserRouter as Router, Route, Routes  } from 'react-router-dom'
+import Home from './Home'
+import SignIn from './SignIn'
 
 function App() {
 
   return (
-    <>
-    <SignedOut>
-      <SignInButton />
-    </SignedOut>
-    <SignedIn>
-      <SignOutButton />
-    </SignedIn>
-    </>
+    <Router>
+      <>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/profile" element={<SignIn />} />
+        </Routes>
+      </>
+    </Router>
+    
   )
 }
 
